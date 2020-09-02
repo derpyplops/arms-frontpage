@@ -7,7 +7,7 @@ const Features = () => (
   <Section id="features">
     <StyledContainer>
       <Subtitle>Features</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <SectionTitle>Machine Learning Driven</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
           <FeatureTitle>Notifications</FeatureTitle>
@@ -18,30 +18,35 @@ const Features = () => (
         <FeatureItem>
           <FeatureTitle>Security</FeatureTitle>
           <FeatureText>
-            Your data is always safe with us as we use the latest security
-            protocols.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem
+            nisi, mattis efficitur magna eget, vestibulum fermentum ante.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Automation</FeatureTitle>
           <FeatureText>
-            Create smart automated workflows and triggers for your money.
+            Donec bibendum luctus orci, sed condimentum nunc luctus vel. Proin
+            et nisl eu dui euismod sagittis.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Aggregation</FeatureTitle>
+          <FeatureTitle>Scalable</FeatureTitle>
           <FeatureText>
-            Easily link up to 5 banks to your finance account.
+            Donec bibendum luctus orci, sed condimentum nunc luctus vel. Proin
+            et nisl eu dui euismod sagittis.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>Send money to friends and family with ease.</FeatureText>
+          <FeatureText>
+            Aliquam elementum, ligula non interdum rutrum, velit mi finibus
+            odio, vel varius magna augue at ante.
+          </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Rewards</FeatureTitle>
           <FeatureText>
-            High interest and rewards for hitting your goals.
+            Sed non dui sed orci dignissim luctus ultrices vel enim.
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
@@ -54,7 +59,7 @@ export default Features
 const StyledContainer = styled(Container)``
 
 const SectionTitle = styled.h3`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
@@ -63,7 +68,7 @@ const SectionTitle = styled.h3`
 
 const Subtitle = styled.h5`
   font-size: 16px;
-  color: ${props => props.theme.color.accent};
+  color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 12px;
   text-align: center;
@@ -76,7 +81,7 @@ const FeaturesGrid = styled.div`
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     padding: 0 64px;
   }
@@ -90,7 +95,7 @@ const FeatureItem = styled.div`
 `
 
 const FeatureTitle = styled.h4`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;
