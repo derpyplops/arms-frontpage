@@ -34,8 +34,8 @@ const Header = () => {
               Machine Learning Powered
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              We are making ship maintainence easy and efficient. Sign up to get
+              early access.
             </h2>
             <HeaderButton href="#contact">Early access</HeaderButton>
           </HeaderTextGroup>
