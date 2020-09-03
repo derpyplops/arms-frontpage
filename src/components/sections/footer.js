@@ -36,7 +36,7 @@ const Footer = () => (
       </FooterColumn>
     </FooterColumnContainer>
     <BrandContainer>
-      <Logo>Finance</Logo>
+      <Logo>ARMS</Logo>
     </BrandContainer>
   </FooterWrapper>
 )
@@ -48,9 +48,9 @@ const FooterWrapper = styled.footer`
 `
 
 const Logo = styled.div`
-  font-family: ${props => props.theme.font.extrabold};
-  ${props => props.theme.font_size.regular};
-  color: ${props => props.theme.color.black.regular};
+  font-family: ${(props) => props.theme.font.extrabold};
+  ${(props) => props.theme.font_size.regular};
+  color: ${(props) => props.theme.color.black.regular};
   text-decoration: none;
   letter-spacing: 1px;
   margin: 0;
@@ -69,7 +69,7 @@ const BrandContainer = styled(Container)`
   display: flex;
   align-items: flex-end;
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
   }
 `
 const FooterColumnContainer = styled(Container)`
@@ -77,7 +77,7 @@ const FooterColumnContainer = styled(Container)`
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 32px;
   justify-content: start;
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 32px;
   }
@@ -85,17 +85,17 @@ const FooterColumnContainer = styled(Container)`
 const FooterColumn = styled.div`
   span {
     font-size: 16px;
-    font-family: ${props => props.theme.font.bold};
-    color: ${props => props.theme.color.primary};
+    font-family: ${(props) => props.theme.font.bold};
+    color: ${(props) => props.theme.color.primary};
   }
   ul {
     list-style: none;
     margin: 16px 0;
     padding: 0;
-    color: ${props => props.theme.color.black.regular};
+    color: ${(props) => props.theme.color.black.regular};
     li {
       margin-bottom: 12px;
-      font-family: ${props => props.theme.font.normal};
+      font-family: ${(props) => props.theme.font.normal};
       font-size: 15px;
     }
   }

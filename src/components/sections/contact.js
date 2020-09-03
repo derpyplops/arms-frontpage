@@ -187,12 +187,7 @@ class Contact extends React.Component {
                     }
                   />
                 </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  className={this.classes.content}
-                  flexBasis="100%"
-                >
+                <Grid item xs={12} className={this.classes.content}>
                   <TextField
                     variant="outlined"
                     required
@@ -214,6 +209,7 @@ class Contact extends React.Component {
                 variant="contained"
                 color="primary"
                 className={this.classes.submit}
+                marginTop={1}
               >
                 Submit
               </Button>
