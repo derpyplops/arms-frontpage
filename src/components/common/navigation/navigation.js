@@ -65,7 +65,7 @@ export default class Navigation extends Component {
       >
         {NAV_ITEMS.map((navItem) => (
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
-        ))}
+        )).push(<NavItem key={"app.armsmaritime.com"}>Dashboard</NavItem>)}
       </Scrollspy>
     </NavListWrapper>
   )
