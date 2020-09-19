@@ -1,54 +1,19 @@
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckDouble, faCog, faShieldAlt} from '@fortawesome/free-solid-svg-icons' 
 
 import { Section, Container } from "../global"
 
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Features</Subtitle>
+      <Subtitle>Reliable, Efficient, Safe</Subtitle>
       <SectionTitle>Machine Learning Driven</SectionTitle>
       <FeaturesGrid>
-        <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
-          <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Security</FeatureTitle>
-          <FeatureText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sem
-            nisi, mattis efficitur magna eget, vestibulum fermentum ante.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Automation</FeatureTitle>
-          <FeatureText>
-            Donec bibendum luctus orci, sed condimentum nunc luctus vel. Proin
-            et nisl eu dui euismod sagittis.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Scalable</FeatureTitle>
-          <FeatureText>
-            Donec bibendum luctus orci, sed condimentum nunc luctus vel. Proin
-            et nisl eu dui euismod sagittis.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>
-            Aliquam elementum, ligula non interdum rutrum, velit mi finibus
-            odio, vel varius magna augue at ante.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
-          <FeatureTitle>Rewards</FeatureTitle>
-          <FeatureText>
-            Sed non dui sed orci dignissim luctus ultrices vel enim.
-          </FeatureText>
-        </FeatureItem>
+        <FeatureBlock icon={faCheckDouble} header="Reliable" text="Data-driven feedback results in lesser unexpected downtime due to predictive maintenance."></FeatureBlock>
+        <FeatureBlock icon={faCog} header="Efficient" text="Acoustic sensors much cheaper than vibrational sensors allow us to provide services for a low fee."></FeatureBlock>
+        <FeatureBlock icon={faShieldAlt} header="Safe" text="Machine-learning driven evidence provides ample warning for equipment failure."></FeatureBlock>
       </FeaturesGrid>
     </StyledContainer>
   </Section>
@@ -75,9 +40,10 @@ const Subtitle = styled.h5`
 `
 
 const FeaturesGrid = styled.div`
-  max-width: 670px;
+  align-items: flex-start
+  max-width: 800px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
@@ -89,9 +55,13 @@ const FeaturesGrid = styled.div`
 
 const FeatureItem = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+`
+
+const FeatureSubtitle = styled.p`
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.5rem;
 `
 
 const FeatureTitle = styled.h4`
@@ -102,5 +72,18 @@ const FeatureTitle = styled.h4`
 `
 
 const FeatureText = styled.p`
-  text-align: center;
 `
+
+
+
+class FeatureBlock extends React.Component {
+  render() {
+    return <FeatureItem id="features">
+      <FeatureTitle><FontAwesomeIcon icon={this.props.icon}/> {this.props.header}</FeatureTitle>
+      <FeatureSubtitle></FeatureSubtitle>
+        <FeatureText>
+          {this.props.text}
+        </FeatureText>
+    </FeatureItem>
+  }
+}

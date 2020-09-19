@@ -13,6 +13,23 @@ import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
 import { Section } from "../global"
+import styled from "styled-components"
+
+const SectionTitle = styled.h3`
+  color: ${(props) => props.theme.color.primary};
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 40px;
+  text-align: center;
+`
+
+const Subtitle = styled.h5`
+  font-size: 16px;
+  color: ${(props) => props.theme.color.accent};
+  letter-spacing: 0px;
+  margin-bottom: 12px;
+  text-align: center;
+`
 
 const url =
   "https://zynrk5evjc.execute-api.us-east-1.amazonaws.com/dev/email/send"
@@ -135,9 +152,7 @@ class Contact extends React.Component {
         <Container component="main" maxWidth="md" pt={10}>
           <CssBaseline />
           <div className={this.classes.paper}>
-            <Typography component="h1" variant="h5">
-              Contact Us!
-            </Typography>
+            <SectionTitle>Contact Us!</SectionTitle>
             <form
               className={this.classes.form}
               noValidate
@@ -209,7 +224,6 @@ class Contact extends React.Component {
                 variant="contained"
                 color="primary"
                 className={this.classes.submit}
-                marginTop={1}
               >
                 Submit
               </Button>
