@@ -12,6 +12,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 8
+      - run: npm install
       - run: npm install -g surge
+      - run: npm install -g gatsby-cli
       - run: npm run-script build
       - run: surge public/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
