@@ -15,7 +15,7 @@ import {
   ActionsContainer,
 } from "./style"
 
-const NAV_ITEMS = ["Features", "Team", "Contact" ]
+const NAV_ITEMS = ["Features", "Team", "Contact", "Dashboard"]
 
 export default class Navigation extends Component {
   state = {
@@ -63,10 +63,14 @@ export default class Navigation extends Component {
         mobile={mobile}
         offset={-64}
       >
-        {NAV_ITEMS.map((navItem) => (
+        {NAV_ITEMS.slice(0, -1).map((navItem) => (
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
-        )).push(<NavItem key={"app.armsmaritime.com"}>Dashboard</NavItem>)}
+        ))}
+        <NavItem key="app.armsmaritime.com"><a style={{fontWeight: "bold"}} href={"http://app.armsmaritime.com"} onClick={this.closeMobileMenu}>
+      Dashboard
+    </a></NavItem>
       </Scrollspy>
+      
     </NavListWrapper>
   )
 
