@@ -9,6 +9,7 @@ module.exports = {
     author: `Jonathan Ng`,
   },
   plugins: [
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {

@@ -37,7 +37,7 @@ const Header = () => {
               We are making ship maintainence easy and efficient. Sign up to get
               early access.
             </h2>
-            {/* <HeaderButton href="#contact">Early access</HeaderButton> TODO: link properly */}
+            <a css="text-decoration: none;" href="#contact"><HeaderButton>Early access</HeaderButton></a>
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />
