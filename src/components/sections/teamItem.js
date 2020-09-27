@@ -51,6 +51,7 @@ const EnclosingDiv = styled.div`
 `
 
 const ProfilePic = styled.img`
+  border-radius: 8px;
   display: inline-block;
   max-width: 100%
 `

@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import TeamItem from "./teamItem"
-import jon from "./jon.jpg"
+import jon from "../../images/profiles/jon.jpeg"
+import afiq from "../../images/profiles/afiq.jpeg"
+import max from "../../images/profiles/max.jpeg"
+import soorya from "../../images/profiles/soorya.jpeg"
+import ricky from "../../images/profiles/ricky.jpeg"
 
 import { Section, Container } from "../global"
 
@@ -47,10 +51,10 @@ class Team extends React.Component {
         <TeamBody> Proudly Singaporean 🇸🇬</TeamBody>
         <ItemsWrapper>
           <TeamItem name="Jonathan Ng" title="Software Engineer" pic={jon}/>
-          <TeamItem name="Ricky Kartolo" title="Chief Engineering" pic={jon}/>
-          <TeamItem name="VR Soorya" title="Data Science" pic={jon}/>
-          <TeamItem name="Max Debatin" title="Business Development" pic={jon}/>
-          <TeamItem name="Afiq" title="Hardware Engineer" pic={jon}/>
+          <TeamItem name="Ricky Kartolo" title="Chief Engineering" pic={ricky}/>
+          <TeamItem name="VR Soorya" title="Data Science" pic={soorya}/>
+          <TeamItem name="Max Debatin" title="Business Development" pic={max}/>
+          <TeamItem name="Afiq" title="Hardware Engineer" pic={afiq}/>
         </ItemsWrapper>
       </TeamContainer>
     )
