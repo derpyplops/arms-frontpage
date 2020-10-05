@@ -168,7 +168,6 @@ class Contact extends React.Component {
                     fullWidth
                     id="firstName"
                     label="First Name"
-                    autoFocus
                     onChange={(event) =>
                       this.setState({ firstName: event.target.value })
                     }
