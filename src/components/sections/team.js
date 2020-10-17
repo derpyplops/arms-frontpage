@@ -51,10 +51,10 @@ class Team extends React.Component {
         <TeamBody> Proudly Singaporean 🇸🇬</TeamBody>
         <ItemsWrapper>
           <TeamItem name="Jonathan Ng" title="Software Engineer" pic={jon}/>
-          <TeamItem name="Ricky Kartolo" title="Chief Engineering" pic={ricky}/>
-          <TeamItem name="VR Soorya" title="Data Science" pic={soorya}/>
-          <TeamItem name="Max Debatin" title="Business Development" pic={max}/>
-          <TeamItem name="Afiq" title="Hardware Engineer" pic={afiq}/>
+          <TeamItem name="Ricky Vian Kartolo" title="Chief Engineering" pic={ricky}/>
+          <TeamItem name="V R Soorya" title="Data Science" pic={soorya}/>
+          <TeamItem name="Maximillian Debatin" title="Business Development" pic={max}/>
+          <TeamItem name="Afiq Yusof" title="Hardware Engineer" pic={afiq}/>
         </ItemsWrapper>
       </TeamContainer>
     )

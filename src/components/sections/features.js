@@ -1,19 +1,21 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckDouble, faCog, faShieldAlt} from '@fortawesome/free-solid-svg-icons' 
+import { faTrashAlt, faMoneyBill, faSearch} from '@fortawesome/free-solid-svg-icons' 
 
 import { Section, Container } from "../global"
+
+
 
 const Features = () => (
   <Section id="features">
     <StyledContainer>
-      <Subtitle>Reliable, Efficient, Safe</Subtitle>
-      <SectionTitle>Machine Learning Driven</SectionTitle>
+      <Subtitle>Our Why</Subtitle>
+      <SectionTitle>The Problem</SectionTitle>
       <FeaturesGrid>
-        <FeatureBlock icon={faCheckDouble} header="Reliable" text="Data-driven feedback results in lesser unexpected downtime due to predictive maintenance."></FeatureBlock>
-        <FeatureBlock icon={faCog} header="Efficient" text="Acoustic sensors much cheaper than vibrational sensors allow us to provide services for a low fee."></FeatureBlock>
-        <FeatureBlock icon={faShieldAlt} header="Safe" text="Machine-learning driven evidence provides ample warning for equipment failure."></FeatureBlock>
+        <FeatureBlock icon={faTrashAlt} header="Labor Intensive" text="Traditional maintenance requires many manual inspections, binding valuable manhours."></FeatureBlock>
+        <FeatureBlock icon={faMoneyBill} header="Wasteful" text="Equipment is replaced according to the rigid maintenance schedule, not its actual condition."></FeatureBlock>
+        <FeatureBlock icon={faSearch} header="Risky" text="With marine systems becoming evermore complex, it is impossible for crew to monitor every component. The result: unexpected breakdowns."></FeatureBlock>
       </FeaturesGrid>
     </StyledContainer>
   </Section>
@@ -73,8 +75,6 @@ const FeatureTitle = styled.h4`
 
 const FeatureText = styled.p`
 `
-
-
 
 class FeatureBlock extends React.Component {
   render() {

@@ -10,6 +10,7 @@ import Footer from "../components/sections/footer"
 import GetStarted from "../components/sections/getstarted"
 import Contact from "../components/sections/contact"
 import Team from "../components/sections/team"
+import Solution from "../components/sections/solution"
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Navigation />
     <Header />
     <Features />
+    <Solution />
     <Team />
     <Contact />
     <Footer />
