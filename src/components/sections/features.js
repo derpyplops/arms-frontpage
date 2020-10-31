@@ -7,21 +7,21 @@ import { Section, Container } from "../global"
 
 
 
-const Features = () => (
-  <Section id="features">
+const Problems = () => (
+  <Section id="problems">
     <StyledContainer>
       <Subtitle>Our Why</Subtitle>
       <SectionTitle>The Problem</SectionTitle>
-      <FeaturesGrid>
-        <FeatureBlock icon={faTrashAlt} header="Labor Intensive" text="Traditional maintenance requires many manual inspections, binding valuable manhours."></FeatureBlock>
-        <FeatureBlock icon={faMoneyBill} header="Wasteful" text="Equipment is replaced according to the rigid maintenance schedule, not its actual condition."></FeatureBlock>
-        <FeatureBlock icon={faSearch} header="Risky" text="With marine systems becoming evermore complex, it is impossible for crew to monitor every component. The result: unexpected breakdowns."></FeatureBlock>
-      </FeaturesGrid>
+      <ProblemGrid>
+        <ProblemBlock icon={faTrashAlt} header="Labor Intensive" text="Traditional maintenance requires many manual inspections, binding valuable manhours."></ProblemBlock>
+        <ProblemBlock icon={faMoneyBill} header="Wasteful" text="Equipment is replaced according to the rigid maintenance schedule, not its actual condition."></ProblemBlock>
+        <ProblemBlock icon={faSearch} header="Risky" text="With marine systems becoming evermore complex, it is impossible for crew to monitor every component. The result: unexpected breakdowns."></ProblemBlock>
+      </ProblemGrid>
     </StyledContainer>
   </Section>
 )
 
-export default Features
+export default Problems
 
 const StyledContainer = styled(Container)``
 
@@ -41,7 +41,7 @@ const Subtitle = styled.h5`
   text-align: center;
 `
 
-const FeaturesGrid = styled.div`
+const ProblemGrid = styled.div`
   align-items: flex-start
   max-width: 800px;
   display: grid;
@@ -55,35 +55,35 @@ const FeaturesGrid = styled.div`
   }
 `
 
-const FeatureItem = styled.div`
+const ProblemItem = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-const FeatureSubtitle = styled.p`
+const ProblemSubtitle = styled.p`
   margin: 0;
   font-weight: 500;
   font-size: 1.5rem;
 `
 
-const FeatureTitle = styled.h4`
+const ProblemTitle = styled.h4`
   color: ${(props) => props.theme.color.primary};
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;
 `
 
-const FeatureText = styled.p`
+const ProblemText = styled.p`
 `
 
-class FeatureBlock extends React.Component {
+class ProblemBlock extends React.Component {
   render() {
-    return <FeatureItem id="features">
-      <FeatureTitle><FontAwesomeIcon icon={this.props.icon}/> {this.props.header}</FeatureTitle>
-      <FeatureSubtitle></FeatureSubtitle>
-        <FeatureText>
+    return <ProblemItem id="problems">
+      <ProblemTitle><FontAwesomeIcon icon={this.props.icon}/> {this.props.header}</ProblemTitle>
+      <ProblemSubtitle></ProblemSubtitle>
+        <ProblemText>
           {this.props.text}
-        </FeatureText>
-    </FeatureItem>
+        </ProblemText>
+    </ProblemItem>
   }
 }

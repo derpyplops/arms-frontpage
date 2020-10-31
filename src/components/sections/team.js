@@ -6,6 +6,7 @@ import afiq from "../../images/profiles/afiq.jpeg"
 import max from "../../images/profiles/max.jpeg"
 import soorya from "../../images/profiles/soorya.jpeg"
 import ricky from "../../images/profiles/ricky.jpeg"
+import lockerRoom from "../../images/team.jpg"
 
 import { Section, Container } from "../global"
 
@@ -25,12 +26,6 @@ const TeamHeader = styled.h3`
   text-align: center;
 `
 
-const TeamBody = styled.p`
-  text-align: center;
-  margin: 1rem auto;
-  max-width: 30%;
-`
-
 const ItemsWrapper = styled.div`
   align-items: flex-start
   max-width: 70%;
@@ -42,13 +37,37 @@ const ItemsWrapper = styled.div`
   overflow: hidden;
 `
 
+const DescriptionWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto;
+  justify-content: space-around;
+  align-items: center;
+`
+
+const DescBody = styled.p`
+  text-align: left;
+`
+
+const DescItem = styled.div`
+  width: 35%
+`
+
+const DescPic = styled.img`
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+`
+
 class Team extends React.Component {
   render() {
     return (
       <TeamContainer id="team">
         <TeamHeader>Our Team</TeamHeader>
-        <TeamBody>Composed out of a diverse background, drawing from multiple disciplines to innovate in exciting ways.</TeamBody>
-        <TeamBody> Proudly Singaporean 🇸🇬</TeamBody>
+        <DescriptionWrap>
+          <DescItem><DescBody>The founders team combines the right set of skills to turn ARMS into a reality and bring smart maintenance technology on board of ocean-going ships as soon as possible. Ricky, Soorya, Jon and Afiq met during an entrepreneurship module at the National University of Singapore. Maximilian joined ARMS in May 2020 after a common friend introduced him to the team.</DescBody></DescItem>
+          <DescItem><DescPic src={lockerRoom} /></DescItem>
+        </DescriptionWrap>
         <ItemsWrapper>
           <TeamItem name="Jonathan Ng" title="Software Engineer" pic={jon}/>
           <TeamItem name="Ricky Vian Kartolo" title="Chief Engineering" pic={ricky}/>
