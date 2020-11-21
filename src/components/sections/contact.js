@@ -118,7 +118,7 @@ class Contact extends React.Component {
   }))
 
   success() {
-    alert("Thanks for sending us a message! We'll get in touch with you ASAP!")
+    alert("Thanks for sending us a message! You should have received an email from arms.front@gmail.com. Otherwise, please contact us directly at arms.front@gmail.com")
     this.state.firstName = ""
     this.state.lastName = ""
     this.state.email = ""

@@ -74,6 +74,7 @@ const ProblemTitle = styled.h4`
 `
 
 const ProblemText = styled.p`
+  color: ${(props) => props.theme.color.text};
 `
 
 class ProblemBlock extends React.Component {

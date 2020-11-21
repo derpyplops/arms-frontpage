@@ -11,6 +11,7 @@ import GetStarted from "../components/sections/getstarted"
 import Contact from "../components/sections/contact"
 import Team from "../components/sections/team"
 import Solution from "../components/sections/solution"
+import Architecture from "../components/sections/architecture"
 
 const IndexPage = () => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = () => (
     <Header />
     <Features />
     <Solution />
+    <Architecture />
     <Team />
     <Contact />
     <Footer />
