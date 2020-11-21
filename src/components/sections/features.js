@@ -26,7 +26,7 @@ export default Problems
 const StyledContainer = styled(Container)``
 
 const SectionTitle = styled.h3`
-  color: ${(props) => props.theme.color.primary};
+color: ${(props) => props.theme.color.white.regular};
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
@@ -58,6 +58,7 @@ const ProblemGrid = styled.div`
 const ProblemItem = styled.div`
   display: flex;
   flex-direction: column;
+  color: ${(props) => props.theme.color.white.regular};
 `
 
 const ProblemSubtitle = styled.p`
@@ -71,10 +72,11 @@ const ProblemTitle = styled.h4`
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;
+  color: ${(props) => props.theme.color.white.regular};
 `
 
 const ProblemText = styled.p`
-  color: ${(props) => props.theme.color.text};
+color: ${(props) => props.theme.color.white.regular};
 `
 
 class ProblemBlock extends React.Component {

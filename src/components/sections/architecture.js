@@ -4,7 +4,6 @@ import { Section, Container } from "../global"
 import diagram from "../../images/architecture-diagram.png"
 
 const StyledContainer = styled(Container)`
-
 `
 
 const Architecture = () => (
@@ -12,12 +11,19 @@ const Architecture = () => (
       <StyledContainer>
         <Subtitle>Diagram</Subtitle>
         <SectionTitle>Architecture</SectionTitle>
-        <img src={diagram}/>
+        <ArchPicture src={diagram}/>
       </StyledContainer>
     </Section>
   )
   
 export default Architecture
+
+const ArchPicture = styled.img`
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+`
 
 const SectionTitle = styled.h3`
   color: ${(props) => props.theme.color.primary};
@@ -25,6 +31,7 @@ const SectionTitle = styled.h3`
   justify-content: center;
   margin: 0 auto 20px;
   text-align: center;
+  color: ${(props) => props.theme.color.white.regular};
 `
 
 const Subtitle = styled.h5`

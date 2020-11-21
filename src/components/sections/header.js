@@ -5,6 +5,8 @@ import Img from "gatsby-image"
 
 import { Container } from "../global"
 
+const StyledContainer = styled(Container)``
+
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -24,7 +26,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper id="top">
-      <StyledContainer>
+      <Container>
         <Flex>
           <HeaderTextGroup>
             <Subtitle>Ship Automation</Subtitle>
@@ -44,18 +46,15 @@ const Header = () => {
             <br />
           </ImageWrapper>
         </Flex>
-      </StyledContainer>
+      </Container>
     </HeaderWrapper>
   )
 }
 
 export default Header
 
-const StyledContainer = styled(Container)`
-`
-
 const HeaderWrapper = styled.header`
-  background-color: ${(props) => props.theme.color.slate};
+  background-color: #f8f8f8;
   padding: 160px 0 80px 0;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));

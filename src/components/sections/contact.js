@@ -12,8 +12,17 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
-import { Section } from "../global"
 import styled from "styled-components"
+
+const ContactSection = styled.section`
+  padding: 20px 0;
+  overflow: hidden;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    padding: 80px 0;
+  }
+`
+
 
 const SectionTitle = styled.h3`
   color: ${(props) => props.theme.color.primary};
@@ -148,7 +157,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <Section id="contact">
+      <ContactSection id="contact">
         <Container component="main" maxWidth="md" pt={10}>
           <CssBaseline />
           <div className={this.classes.paper}>
@@ -229,7 +238,7 @@ class Contact extends React.Component {
             </form>
           </div>
         </Container>
-      </Section>
+      </ContactSection>
     )
   }
 }

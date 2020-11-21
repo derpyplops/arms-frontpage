@@ -30,6 +30,7 @@ const SectionTitle = styled.h3`
   justify-content: center;
   margin: 0 auto 20px;
   text-align: center;
+  color: ${(props) => props.theme.color.white.regular};
 `
 
 const Subtitle = styled.h5`
@@ -57,16 +58,18 @@ const SolutionGrid = styled.div`
 const SolutionItem = styled.div`
   display: flex;
   flex-direction: column;
+  color: ${(props) => props.theme.color.white.regular};
 `
 
 const SolutionSubtitle = styled.p`
   margin: 0;
   font-weight: 500;
   font-size: 1.5rem;
+  color: ${(props) => props.theme.color.white.regular};
 `
 
 const SolutionTitle = styled.h4`
-  color: ${(props) => props.theme.color.primary};
+color: ${(props) => props.theme.color.white.regular};
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;
