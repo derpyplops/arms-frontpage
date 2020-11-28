@@ -40,7 +40,7 @@ const ItemsWrapper = styled.div`
 const DescriptionWrap = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 1rem auto;
+  margin: 5rem auto;
   justify-content: space-around;
   align-items: center;
 `

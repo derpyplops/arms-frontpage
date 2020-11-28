@@ -1,5 +1,4 @@
 import React from "react"
-import Avatar from "@material-ui/core/Avatar"
 import Button from "@material-ui/core/Button"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import TextField from "@material-ui/core/TextField"
@@ -7,8 +6,6 @@ import FormControlLabel from "@material-ui/core/FormControlLabel"
 import Checkbox from "@material-ui/core/Checkbox"
 import Link from "@material-ui/core/Link"
 import Grid from "@material-ui/core/Grid"
-import Box from "@material-ui/core/Box"
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined"
 import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
@@ -23,6 +20,18 @@ const ContactSection = styled.section`
   }
 `
 
+const ContactButton = styled(Button)({
+  background: 'linear-gradient(45deg, #00baf1 30%, #00baf1 90%)',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'white',
+  height: 48,
+  padding: '0 30px',
+  marginTop: 3
+})
+
+  
 
 const SectionTitle = styled.h3`
   color: ${(props) => props.theme.color.primary};
@@ -107,7 +116,7 @@ class Contact extends React.Component {
       marginTop: theme.spacing(2),
       marginBottom: theme.spacing(2),
       display: "flex",
-      flexDirection: "column",
+      flexDirection: "row",
       alignItems: "center",
     },
     avatar: {
@@ -119,7 +128,10 @@ class Contact extends React.Component {
       marginTop: theme.spacing(3),
     },
     submit: {
-      margin: theme.spacing(3),
+      background: "red",
+      color: "red",
+      backgroundColor: "red",
+      marginTop: "3rem",
     },
     content: {
       flexBasis: "10%",
@@ -226,15 +238,13 @@ class Contact extends React.Component {
                   />
                 </Grid>
               </Grid>
-              <Button
+              <ContactButton
                 type="submit"
                 fullWidth
                 variant="contained"
-                color="primary"
-                className={this.classes.submit}
               >
                 Submit
-              </Button>
+              </ContactButton>
             </form>
           </div>
         </Container>

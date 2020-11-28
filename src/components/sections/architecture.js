@@ -4,6 +4,8 @@ import { Section, Container } from "../global"
 import diagram from "../../images/architecture-diagram.png"
 
 const StyledContainer = styled(Container)`
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 `
 
 const Architecture = () => (

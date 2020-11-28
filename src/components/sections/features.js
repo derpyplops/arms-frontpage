@@ -23,7 +23,10 @@ const Problems = () => (
 
 export default Problems
 
-const StyledContainer = styled(Container)``
+const StyledContainer = styled(Container)`
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+`
 
 const SectionTitle = styled.h3`
 color: ${(props) => props.theme.color.white.regular};

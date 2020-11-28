@@ -20,17 +20,18 @@ const GlobalStyles = createGlobalStyle`
   
   h1 {
     ${props => props.theme.font_size.xlarge};
-    font-family: ${props => props.theme.font.bold};
+    font-family: ${props => props.theme.font.heading};
     
   }
 
   h2 {
     ${props => props.theme.font_size.larger};
+    font-family: ${props => props.theme.font.heading};
   }
 
   h3 {
     ${props => props.theme.font_size.larger};
-    font-family: ${props => props.theme.font.bold};
+    font-family: ${props => props.theme.font.heading};
   }
 
   h4 {
